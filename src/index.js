@@ -32,7 +32,7 @@ function getPassword1() {
     const response = prompt("Введи подтверждение");
     if(response === null) return;
 
-    if (response.toLowerCase() === "salmana") {
+    if (response.toLowerCase() === "samana") {
         alert("Верно!");
         getPassword2();
     } else {
@@ -45,7 +45,7 @@ function getResponse3() {
     const response = prompt("Скiльки бубочок на ожинi?");
     if(response !== null) {
         alert("Максим, ты справился с первым испытанием и зачислен в стажёры. Пройди все испытания чтобы получить статус Спец Агента");
-        alert("Самый важный навые агента: Агент должен уметь согреть холодное сердце!");
+        alert("Самый важный навык агента: Агент должен уметь согреть холодное сердце!");
         getPassword1();
     } else {
         getResponse1();
