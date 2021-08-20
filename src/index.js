@@ -6,7 +6,7 @@ function getPassword3() {
     const response = prompt("Введи подтверждение");
     if(response === null) return;
 
-    if (response.toLowerCase() === "dinosaur") {
+    if (response.toLowerCase() === "i love yxu") {
         alert("Ты отлично справился со всеми загадками, пришло время приступать к полевым испытаниям! Все инструкции в красной шкатулке. На выход, стажёр!");
     } else {
         alert("Это не верно!");
