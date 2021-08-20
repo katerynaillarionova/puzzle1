@@ -6,7 +6,7 @@ function getPassword3() {
     const response = prompt("Введи подтверждение");
     if(response === null) return;
 
-    if (response === "dinosaur" || response === "DINOSAUR") {
+    if (response.toLowerCase() === "dinosaur") {
         alert("Ты отлично справился со всеми загадками, пришло время приступать к полевым испытаниям! Все инструкции в красной шкатулке. На выход, стажёр!");
     } else {
         alert("Это не верно!");
@@ -19,7 +19,7 @@ function getPassword2() {
     const response = prompt("Введи подтверждение");
     if(response === null) return;
 
-    if (response === "salmana" || response === "SALMANA") {
+    if (response.toLowerCase() === "salmana") {
         alert("Верно!");
         getPassword3();
     } else {
@@ -32,9 +32,9 @@ function getPassword1() {
     const response = prompt("Введи подтверждение");
     if(response === null) return;
 
-    if (response === "hello world" || response === "HELLO WORLD") {
+    if (response.toLowerCase() === "hello world") {
         alert("Верно!");
-        button.style.visibility = "visible";
+        getPassword2();
     } else {
         alert("Это не верно!");
         getPassword1();
@@ -56,7 +56,7 @@ function getResponse2() {
     const response = prompt("Сколько людей побывало на луне?");
     if(response === null) return;
 
-    if (response === "124") {
+    if (response === "12") {
         alert("Верно!");
         getResponse3();
     } else {
@@ -76,10 +76,6 @@ function getResponse1() {
         getResponse1();
     }
 }
-
-const intro = document.createElement('div');
-intro.innerHTML = "Агент должен уметь находить иголку в стоге сена";
-document.body.appendChild(intro);
 
 let type = "WebGL";
 if(!PIXI.utils.isWebGLSupported()){
@@ -110,6 +106,8 @@ function setup(loader, resources) {
     gfx.interactive = true;
     gfx.buttonMode = true;
     gfx.on("click", () => {
+        getPassword2();
+    }).on("pointerdown", () => {
         getPassword2();
     });
 
