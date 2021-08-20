@@ -15,11 +15,11 @@ function getPassword3() {
 }
 
 function getPassword2() {
-    alert("Агент должен уметь согреть холодное сердце!");
+    alert("Агент должен иметь навыки сапёра. В твоем доме заложена бомба. Найди ее и обезвредь. Быстрее, часики тикают! Тик-так!");
     const response = prompt("Введи подтверждение");
     if(response === null) return;
 
-    if (response.toLowerCase() === "salmana") {
+    if (response.toLowerCase() === "hello world") {
         alert("Верно!");
         getPassword3();
     } else {
@@ -32,7 +32,7 @@ function getPassword1() {
     const response = prompt("Введи подтверждение");
     if(response === null) return;
 
-    if (response.toLowerCase() === "hello world") {
+    if (response.toLowerCase() === "salmana") {
         alert("Верно!");
         getPassword2();
     } else {
@@ -45,7 +45,7 @@ function getResponse3() {
     const response = prompt("Скiльки бубочок на ожинi?");
     if(response !== null) {
         alert("Максим, ты справился с первым испытанием и зачислен в стажёры. Пройди все испытания чтобы получить статус Спец Агента");
-        alert("Агент должен иметь навыки сапёра. В твоем доме заложена бомба. Найди ее и обезвредь. Быстрее, часики тикают! Тик-так!");
+        alert("Самый важный навые агента: Агент должен уметь согреть холодное сердце!");
         getPassword1();
     } else {
         getResponse1();
