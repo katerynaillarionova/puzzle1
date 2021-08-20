@@ -90,7 +90,7 @@ PIXI.utils.sayHello(type);
 
 let app = new PIXI.Application({
         width: window.innerWidth,
-        height: 4600,
+        height: window.innerHeight,
         antialias: true,
         transparent: false,
         resolution: 1
@@ -102,11 +102,11 @@ app.loader.load(setup);
 function setup(loader, resources) {
     let gfx = new PIXI.Graphics();
     gfx.beginFill(0x000000);
-    gfx.drawRect(0, 0, window.innerWidth, 30);
+    gfx.drawRect(0, 0, window.innerWidth, 20);
     gfx.endFill();
 
     app.stage.addChild(gfx);
-    gfx.position.set(0, 4600/2);
+    gfx.position.set(0, window.innerHeight/2);
     gfx.interactive = true;
     gfx.buttonMode = true;
     gfx.on("click", () => {
@@ -117,11 +117,6 @@ function setup(loader, resources) {
 }
 
 document.body.appendChild(app.view);
-
-const el = document.createElement('div');
-el.innerHTML = "Look for the button somewhere in the middle";
-el.style.marginLeft = "400px";
-document.body.appendChild(el);
 
 getResponse1();
 
